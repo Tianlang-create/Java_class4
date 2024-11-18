@@ -1,4 +1,4 @@
-package SocketExampleTest2;
+package TCP_SocketExampleTest2;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
