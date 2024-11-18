@@ -39,6 +39,45 @@ public class IP_study1 {
             System.out.println(address1.getHostAddress());
             System.out.println(address1.getHostName());
         }
+# Java网络编程
+
+## 计算机网络
+
+## 网络通信协议及接口
+
+
+
+
+
+## IP协议 
+
+ code、IP概念、实际代码、非本机IP获取
+
+```Java
+import java.net.*;
+
+public class IP_study1 {
+    //获取本机IP 使用异常包括
+        public static void main(String[] args) {
+            InetAddress address= null;
+            try {
+                address = InetAddress.getLocalHost();
+            } catch (UnknownHostException e) {
+                throw new RuntimeException(e);
+            }
+            System.out.println(address.getHostAddress());
+            //主机名
+            System.out.println(address.getHostName());
+            //其他主机
+            InetAddress address1= null;
+            try {
+                address1 = InetAddress.getByName("www.baidu.com");
+            } catch (UnknownHostException e) {
+                throw new RuntimeException(e);
+            }
+            System.out.println(address1.getHostAddress());
+            System.out.println(address1.getHostName());
+        }
 }
 
 ```
@@ -156,3 +195,12 @@ public class UDPServer {
 如果是TCP中先启动客户端会报错：
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a4fa7514e11cd9835489949f02c0cf6e.png)
 而如果是UDP中先启动发送方不会报错，但会正常退出。
+
+## 多线程实例 Teacher&Student(Code)
+
+
+
+# 小结
+
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e56124e729ab4aca64f4917ee7e2ff1b.png)
+
