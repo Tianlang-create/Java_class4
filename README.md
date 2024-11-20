@@ -19,6 +19,13 @@
 
 **TCP传送数据虽然可靠，但传送得比较慢；UDP传送数据不可靠，但是传送得快。**
 
+### 包的使用
+
+```java
+java.net.ServerSocket;
+java.net.Socket;
+```
+
 
 
 ## IP协议
